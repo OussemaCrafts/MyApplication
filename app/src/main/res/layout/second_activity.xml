@@ -1,16 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/secondLayout"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Texte affiché au centre -->
     <TextView
-        android:id="@+id/textGreeting"
+        android:id="@+id/lblHeader"
+        android:text="Salut !"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#2196F3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salut !"
-        android:textSize="24sp"
-        android:layout_centerInParent="true"/>
-</RelativeLayout>
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:text="Entrez vos deux dépenses du jour 💸"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
+
+    <EditText
+        android:id="@+id/dep1"
+        android:hint="Dépense 1 (DT)"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/dep2"
+        android:hint="Dépense 2 (DT)"
+        android:inputType="numberDecimal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:id="@+id/btnEnvoyer"
+        android:text="Afficher le total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+</LinearLayout>
